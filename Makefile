@@ -3,7 +3,7 @@
 .SECONDARY:
 
 LATEX = uplatex
-LATEX_FLAGS =
+LATEX_FLAGS = -shell-escape
 BIBTEX = pbibtex
 BIBTEX_FLAGS =
 DVIPDF = dvipdfmx
@@ -11,7 +11,6 @@ DVIPDF_FLAGS =
 
 SOURCE = main
 SUB_SOURCES = 
-GEN_GRAPHS =
 BIB_FILES = cite.bib
 
 all: $(SOURCE).pdf Makefile ## Create PDF
@@ -22,18 +21,13 @@ clean: ## Clean latex intermediary files
 	rm -f *.bbl
 	rm -f *.blg
 
-clean-all: clean ## Clean all intermediary files including .dvi, .pdf, and generated PNGs
+clean-all: clean ## Clean all intermediary files including .dvi, and .pdf
 	@#https://ir9ex.hatenablog.jp/entry/20121206/1354774247
 	rm -f $(SOURCE).dvi | echo
 	rm -f $(SOURCE).pdf | echo
 	rm -f $(SOURCE)-cover.pdf | echo
-	rm -f $(GEN_GRAPHS:%=%.png) | echo
 
-%.png:
-	echo "Generating $*"
-	# write the command here to generate each image
-
-%.pdf: %.ltx $(GEN_GRAPHS:%=%.png) $(SUB_SOURCES:%=%.ltx)
+%.pdf: %.ltx $(SUB_SOURCES:%=%.ltx)
 	$(LATEX) $(LATEX_FLAGS) $*.ltx
 	$(BIBTEX) $(BIBTEX_FLAGS) $*
 	$(LATEX) $(LATEX_FLAGS) $*.ltx
