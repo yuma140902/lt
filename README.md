@@ -53,12 +53,6 @@ scoop install make
 make
 ```
 
-または
-
-```sh
-make all
-```
-
 ### コンパイルの中間ファイルを削除する
 
 ```sh
@@ -72,6 +66,12 @@ make clean-all
 ```
 
 ## FAQ
+
+### サンプルコードが邪魔なので本当に空のテンプレートがほしい
+
+```sh
+git checkout empty
+```
 
 ### makeしたときに意味わからんエラーが出る
 
