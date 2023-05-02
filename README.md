@@ -73,6 +73,18 @@ make clean-all
 git checkout empty
 ```
 
+### 参考文献リストはいらない
+
+`main.ltx`の
+
+```latex
+\nocite*{}
+\bibliographystyle{junsrt}
+\bibliography{cite}
+```
+
+を削除してください。
+
 ### makeしたときに意味わからんエラーが出る
 
 絶対にコードが間違っていないという自信がある場合は`make clean-all && make`を実行すると上手くいくかもしれません。
@@ -81,3 +93,6 @@ git checkout empty
 
 ltxファイル内の`\nocite*{}`を削除し、`make clean-all && make`を実行してください。それでも直らない場合は知りません。
 
+### その他
+
+その他の質問はyuma14<sup>[誰？]</sup>まで
