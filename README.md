@@ -32,7 +32,9 @@ LaTeXで「普通」のレポートを書くためのテンプレートです。
 
 TeX Liveのfull-schemeをインストールすれば十分です。
 
-### 2. qpdf、make、git
+参考：[TeX入手法 - TeX Wiki](https://texwiki.texjp.org/?TeX入手法)
+
+### 2. make、git
 
 [scoop](https://scoop.sh/)を使用する場合、以下のコマンドでインストールできます。
 
@@ -41,9 +43,15 @@ scoop install git
 scoop install make
 ```
 
+その他の場合は適当にインストールしてください。
+
 ### 4. git clone
 
-このリポジトリを適当な場所にgit cloneします。
+適当な場所で
+
+```sh
+git clone https://gitlab.com/yuma140902/generic-latex-template-with-citation.git
+```
 
 ## 使用方法
 
@@ -53,13 +61,13 @@ scoop install make
 make
 ```
 
-### コンパイルの中間ファイルを削除する
+### タイプセットの中間ファイルを削除する
 
 ```sh
 make clean
 ```
 
-### dviファイルとPDFファイル、GEN_GRAPHSに指定した画像も含む中間ファイルを削除する
+### dviファイルとPDFファイルも含む中間ファイルを削除する
 
 ```sh
 make clean-all
