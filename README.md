@@ -67,7 +67,7 @@ make
 make clean
 ```
 
-### dviファイルとPDFファイルも含む中間ファイルを削除する
+### PDFファイルも含む中間ファイルを削除する
 
 ```sh
 make clean-all
