@@ -83,15 +83,9 @@ git checkout empty
 
 ### 参考文献リストはいらない
 
-`main.ltx`の
-
-```latex
-\nocite*{}
-\bibliographystyle{junsrt}
-\bibliography{cite}
+```sh
+git checkout no-cite
 ```
-
-を削除してください。
 
 ### makeしたときに意味わからんエラーが出る
 
