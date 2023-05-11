@@ -45,7 +45,7 @@ scoop install make
 
 その他の場合は適当にインストールしてください。
 
-### 4. git clone
+### 3. git clone
 
 適当な場所で
 
