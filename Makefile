@@ -10,7 +10,6 @@ DVIPDF = dvipdfmx
 DVIPDF_FLAGS =
 
 SOURCE = main
-SUB_SOURCES = 
 BIB_FILES = cite.bib
 
 all: $(SOURCE).pdf Makefile ## Create PDF
@@ -25,9 +24,8 @@ clean-all: clean ## Clean all intermediary files including .dvi, and .pdf
 	@#https://ir9ex.hatenablog.jp/entry/20121206/1354774247
 	rm -f $(SOURCE).dvi | echo
 	rm -f $(SOURCE).pdf | echo
-	rm -f $(SOURCE)-cover.pdf | echo
 
-%.pdf: %.ltx $(SUB_SOURCES:%=%.ltx)
+%.pdf: %.ltx
 	$(LATEX) $(LATEX_FLAGS) $*.ltx
 	$(BIBTEX) $(BIBTEX_FLAGS) $*
 	$(LATEX) $(LATEX_FLAGS) $*.ltx
