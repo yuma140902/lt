@@ -22,6 +22,7 @@ LaTeXで「普通」のレポートを書くためのテンプレートです。
     - amssymb
     - amsmath
     - url
+    - wrapfig
 - LaTeX以外
   - make
   - git
@@ -36,21 +37,28 @@ TeX Liveのfull-schemeをインストールすれば十分です。
 
 ### 2. make、git
 
-[scoop](https://scoop.sh/)を使用する場合、以下のコマンドでインストールできます。
-
-```sh
-scoop install git
-scoop install make
-```
-
-その他の場合は適当にインストールしてください。
+makeとgitをインストールしてください。
 
 ### 3. git clone
 
-適当な場所で
+適当な場所で`git clone`します。テンプレートは3種類あり、ブランチによって分けられています。
+
+#### 3.1. サンプル付きのテンプレート
 
 ```sh
-git clone https://gitlab.com/yuma140902/generic-latex-template-with-citation.git
+git clone -b master https://gitlab.com/yuma140902/generic-latex-template-with-citation.git report
+```
+
+#### 3.2. 空のテンプレート
+
+```sh
+git clone -b empty https://gitlab.com/yuma140902/generic-latex-template-with-citation.git report
+```
+
+#### 3.3. 空かつ参考文献なしのテンプレート
+
+```sh
+git clone -b no-cite https://gitlab.com/yuma140902/generic-latex-template-with-citation.git report
 ```
 
 ## 使用方法
@@ -74,18 +82,6 @@ make clean-all
 ```
 
 ## FAQ
-
-### サンプルコードが邪魔なので本当に空のテンプレートがほしい
-
-```sh
-git checkout empty
-```
-
-### 参考文献リストはいらない
-
-```sh
-git checkout no-cite
-```
 
 ### makeしたときに意味わからんエラーが出る
 
