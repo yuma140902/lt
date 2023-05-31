@@ -15,7 +15,7 @@ LaTeXで「普通」のレポートを書くためのテンプレートです。
   - uplatex
   - pdfdvimx
   - pbibtex
-  - 以下のパッケージ
+  - パッケージ
     - jsarticle
     - graphicx
     - siunitx
@@ -23,42 +23,30 @@ LaTeXで「普通」のレポートを書くためのテンプレートです。
     - amsmath
     - url
     - wrapfig
-- LaTeX以外
-  - make
-  - git
+- make
+- git
+- LinuxまたはWindows (おそらくmacOSでも動作します)
 
-## セットアップ
-
-### 1. LaTeXのインストール
-
-TeX Liveのfull-schemeをインストールすれば十分です。
-
-参考：[TeX入手法 - TeX Wiki](https://texwiki.texjp.org/?TeX入手法)
-
-### 2. make、git
-
-makeとgitをインストールしてください。
-
-### 3. git clone
+## セットアップ方法
 
 適当な場所で`git clone`します。テンプレートは3種類あり、ブランチによって分けられています。
 
-#### 3.1. サンプル付きのテンプレート
+### 1. サンプル付きのテンプレート
 
 ```sh
-git clone -b master https://gitlab.com/yuma140902/generic-latex-template-with-citation.git report
+git clone -b master https://gitlab.com/yuma140902/lt report
 ```
 
-#### 3.2. 空のテンプレート
+### 2. 空のテンプレート
 
 ```sh
-git clone -b empty https://gitlab.com/yuma140902/generic-latex-template-with-citation.git report
+git clone -b empty https://gitlab.com/yuma140902/lt report
 ```
 
-#### 3.3. 空かつ参考文献なしのテンプレート
+### 3. 空かつ参考文献なしのテンプレート
 
 ```sh
-git clone -b no-cite https://gitlab.com/yuma140902/generic-latex-template-with-citation.git report
+git clone -b no-cite https://gitlab.com/yuma140902/lt report
 ```
 
 ## 使用方法
@@ -80,6 +68,13 @@ make clean
 ```sh
 make clean-all
 ```
+## 動作環境のセットアップ方法
+
+### LaTeX
+
+TeX Liveのfull-schemeをインストールすれば十分です。
+
+参考：[TeX入手法 - TeX Wiki](https://texwiki.texjp.org/?TeX入手法)
 
 ## FAQ
 
