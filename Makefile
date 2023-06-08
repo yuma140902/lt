@@ -2,12 +2,10 @@
 .PHONY: all
 .SECONDARY:
 
-LATEX = uplatex
-LATEX_FLAGS = -shell-escape
+LATEX = lualatex
+LATEX_FLAGS = 
 BIBTEX = pbibtex
 BIBTEX_FLAGS =
-DVIPDF = dvipdfmx
-DVIPDF_FLAGS =
 
 SOURCE = main
 BIB_FILES = cite.bib
@@ -42,11 +40,9 @@ clean-all: clean ## Clean all intermediary files including .dvi, and .pdf
 	rm -f $(SOURCE).pdf | echo
 
 %.pdf: %.ltx
-	$(LATEX) $(LATEX_FLAGS) $*.ltx
+	$(LATEX) $(LATEX_FLAGS) --draftmode $*.ltx
 	$(BIBTEX) $(BIBTEX_FLAGS) $*
 	$(LATEX) $(LATEX_FLAGS) $*.ltx
-	$(LATEX) $(LATEX_FLAGS) $*.ltx
-	$(DVIPDF) $(DVIPDF_FLAGS) $*
 
 help: ## Prints help for targets with comments
 	@cat $(MAKEFILE_LIST) | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
