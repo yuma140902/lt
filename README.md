@@ -50,15 +50,7 @@ make clean-all
   - 各エンジン(upLaTeX等)
   - 各ドライバ(dvipdfmx等)
   - pbibtex
-  - パッケージ
-    - plautopatch
-    - jsarticle
-    - graphicx
-    - siunitx
-    - amssymb
-    - amsmath
-    - url
-    - wrapfig
+  - 各パッケージ
 - make
 - git
 - LinuxまたはWindows (おそらくmacOSでも動作します)
@@ -70,14 +62,4 @@ make clean-all
 TeX Liveのfull-schemeをインストールすれば十分です。
 
 参考：[TeX入手法 - TeX Wiki](https://texwiki.texjp.org/?TeX入手法)
-
-## FAQ
-
-### makeしたときに意味わからんエラーが出る
-
-絶対にコードが間違っていないという自信がある場合は`make clean-all && make`を実行すると上手くいくかもしれません。
-
-### BibTeXがエラーを吐く
-
-ltxファイル内の`\nocite*{}`を削除し、`make clean-all && make`を実行してください。それでも直らない場合は知りません。
 
