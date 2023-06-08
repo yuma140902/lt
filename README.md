@@ -9,24 +9,6 @@ LaTeXで「普通」のレポートを書くためのテンプレートです。
 - LaTeXを使用した組版処理
 - BibTeXを用いた文献管理
 
-## 動作環境
-
-- LaTeX関係
-  - uplatex
-  - pdfdvimx
-  - pbibtex
-  - パッケージ
-    - jsarticle
-    - graphicx
-    - siunitx
-    - amssymb
-    - amsmath
-    - url
-    - wrapfig
-- make
-- git
-- LinuxまたはWindows (おそらくmacOSでも動作します)
-
 ## セットアップ方法
 
 適当な場所で`git clone`します。テンプレートは3種類あり、ブランチによって分けられています。
@@ -68,6 +50,26 @@ make clean
 ```sh
 make clean-all
 ```
+
+## 動作環境
+
+- LaTeX関係
+  - uplatex
+  - pdfdvimx
+  - pbibtex
+  - パッケージ
+    - plautopatch
+    - jsarticle
+    - graphicx
+    - siunitx
+    - amssymb
+    - amsmath
+    - url
+    - wrapfig
+- make
+- git
+- LinuxまたはWindows (おそらくmacOSでも動作します)
+
 ## 動作環境のセットアップ方法
 
 ### LaTeX
