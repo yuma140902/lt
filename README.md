@@ -16,9 +16,9 @@ git clone -b (ブランチ名) https://github.com/yuma140902/lt report
 | `empty`                    | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | 普通はこれを使えばいいと思います |
 | `nocite`                   | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | なし             | 普通はこれを使えばいいと思いますその2 |
 | `master`                   | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | サンプル付きです |
-| `bxjscls-uplatex`          | upTeX    | upLaTeX       | dvipdfmk | bxjsarticle | pBiBTeX          | [BXjscls](https://texwiki.texjp.org/BXjscls)を使用してみるテスト |
-| `bxjscls-uplatex-samples`  | upTeX    | upLaTeX       | dvipdfmk | bxjsarticle | pBiBTeX          | ↑のサンプル付きバージョン |
-| `bxjscls-uplatex-nocite`   | upTeX    | upLaTeX       | dvipdfmk | bxjsarticle | なし             | ↑の参考文献なしバージョン |
+| `bxjscls-uplatex`          | upTeX    | upLaTeX       | dvipdfmx | bxjsarticle | pBiBTeX          | [BXjscls](https://texwiki.texjp.org/BXjscls)を使用してみるテスト |
+| `bxjscls-uplatex-samples`  | upTeX    | upLaTeX       | dvipdfmx | bxjsarticle | pBiBTeX          | ↑のサンプル付きバージョン |
+| `bxjscls-uplatex-nocite`   | upTeX    | upLaTeX       | dvipdfmx | bxjsarticle | なし             | ↑の参考文献なしバージョン |
 | `lualatex-bxjscls-samples` | luaTeX   | luaLaTeX      | なし     | bxjsarticle | pBiBTeX          | LuaLaTeX |
 
 
