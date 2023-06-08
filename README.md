@@ -38,6 +38,8 @@ git clone -b no-cite https://gitlab.com/yuma140902/lt report
 | ブランチ | 説明 |
 |-----------|-------------|
 | bxjscls-uplatex | [BXjscls](https://texwiki.texjp.org/BXjscls)とupLaTeXを使用するテンプレート |
+| bxjscls-uplatex-empty | ↑の空バージョン |
+| bxjscls-uplatex-nocite | ↑の参考文献なしバージョン
 
 
 ## 使用方法
