@@ -11,7 +11,7 @@ LaTeXで「普通」のレポートを書くためのテンプレートです。
 
 ## セットアップ方法
 
-適当な場所で`git clone`します。テンプレートは3種類あり、ブランチによって分けられています。
+適当な場所で`git clone`します。テンプレートは4種類あり、ブランチによって分けられています。
 
 ### 1. サンプル付きのテンプレート
 
@@ -30,6 +30,15 @@ git clone -b empty https://gitlab.com/yuma140902/lt report
 ```sh
 git clone -b no-cite https://gitlab.com/yuma140902/lt report
 ```
+
+### その他
+
+その他、次のようなテンプレートを用意しています。
+
+| ブランチ | 説明 |
+|-----------|-------------|
+| bxjscls-uplatex | [BXjscls](https://texwiki.texjp.org/BXjscls)とupLaTeXを使用するテンプレート |
+
 
 ## 使用方法
 
