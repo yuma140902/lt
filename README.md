@@ -18,7 +18,7 @@ git clone -b (ブランチ名) https://github.com/yuma140902/lt report
 | `master`                   | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | サンプル付きです |
 | `bxjscls-uplatex`          | upTeX    | upLaTeX       | dvipdfmk | bxjsarticle | pBiBTeX          | [BXjscls](https://texwiki.texjp.org/BXjscls)を使用してみるテスト |
 | `bxjscls-uplatex-samples`  | upTeX    | upLaTeX       | dvipdfmk | bxjsarticle | pBiBTeX          | ↑のサンプル付きバージョン |
-| `bxjscls-uplatex-nocite`   | upTeX    | upLaTeX       | dvipdfmk | bxjsarticle | pBiBTeX          | ↑の参考文献なしバージョン |
+| `bxjscls-uplatex-nocite`   | upTeX    | upLaTeX       | dvipdfmk | bxjsarticle | なし             | ↑の参考文献なしバージョン |
 | `lualatex-bxjscls-samples` | luaTeX   | luaLaTeX      | なし     | bxjsarticle | pBiBTeX          | LuaLaTeX |
 
 
