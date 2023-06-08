@@ -14,7 +14,7 @@ git clone -b (ブランチ名) https://github.com/yuma140902/lt report
 | ブランチ                   | エンジン | LaTeXエンジン | ドライバ | 文書クラス  | 文献データベース |  説明 |
 |----------------------------|----------|---------------|----------|-------------|------------------|------|
 | `empty`                    | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | 普通はこれを使えばいいと思います |
-| `nocite`                  | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | なし             | 普通はこれを使えばいいと思います(その2) |
+| `nocite`                  | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | なし             | 普通はこれを使えばいいと思いますその2 |
 | `master`                   | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | サンプル付きです |
 | `bxjscls-uplatex`          | upTeX    | upLaTeX       | dvipdfmk | bxjsarticle | pBiBTeX          | [BXjscls](https://texwiki.texjp.org/BXjscls)を使用してみるテスト |
 | `bxjscls-uplatex-samples`  | upTeX    | upLaTeX       | dvipdfmk | bxjsarticle | pBiBTeX          | ↑のサンプル付きバージョン |
