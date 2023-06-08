@@ -4,13 +4,10 @@
 
 LATEX = uplatex
 LATEX_FLAGS = -shell-escape
-BIBTEX = pbibtex
-BIBTEX_FLAGS =
 DVIPDF = dvipdfmx
 DVIPDF_FLAGS =
 
 SOURCE = main
-BIB_FILES = cite.bib
 
 all: $(SOURCE).pdf Makefile ## Create PDF
 
@@ -42,8 +39,6 @@ clean-all: clean ## Clean all intermediary files including .dvi, and .pdf
 	rm -f $(SOURCE).pdf | echo
 
 %.pdf: %.ltx
-	$(LATEX) $(LATEX_FLAGS) $*.ltx
-	$(BIBTEX) $(BIBTEX_FLAGS) $*
 	$(LATEX) $(LATEX_FLAGS) $*.ltx
 	$(LATEX) $(LATEX_FLAGS) $*.ltx
 	$(DVIPDF) $(DVIPDF_FLAGS) $*
