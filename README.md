@@ -1,48 +1,30 @@
-# generic-latex-template-with-citation
+# LaTeX Templates
 
-LaTeXで「普通」のレポートを書くためのテンプレートです。
-
-## 機能
-
-以下のような機能があります。
-
-- LaTeXを使用した組版処理
-- BibTeXを用いた文献管理
+LaTeXのテンプレート集です。
 
 ## セットアップ方法
 
-適当な場所で`git clone`します。テンプレートは4種類あり、ブランチによって分けられています。
-
-### 1. サンプル付きのテンプレート
-
-```sh
-git clone -b master https://gitlab.com/yuma140902/lt report
-```
-
-### 2. 空のテンプレート
+適当な場所で`git clone`します。テンプレートは複数あり、ブランチによって分けられています。
+いろいろな組み合わせが試せるのでお得です。
 
 ```sh
-git clone -b empty https://gitlab.com/yuma140902/lt report
+git clone -b (ブランチ名) https://gitlab.com/yuma140902/lt report
 ```
 
-### 3. 空かつ参考文献なしのテンプレート
 
-```sh
-git clone -b no-cite https://gitlab.com/yuma140902/lt report
-```
-
-### その他
-
-その他、次のようなテンプレートを用意しています。
-
-| ブランチ | 説明 |
-|-----------|-------------|
-| bxjscls-uplatex | [BXjscls](https://texwiki.texjp.org/BXjscls)とupLaTeXを使用するテンプレート |
-| bxjscls-uplatex-empty | ↑の空バージョン |
-| bxjscls-uplatex-nocite | ↑の参考文献なしバージョン
+| ブランチ                 | エンジン | LaTeXエンジン | ドライバ | 文書クラス  | 文献データベース |  説明 |
+|--------------------------|----------|---------------|----------|-------------|------------------|------|
+| empty                    | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | 普通はこれを使えばいいと思います |
+| no-cite                  | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | なし             | 普通はこれを使えばいいと思います(その2) |
+| master                   | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | サンプル付きです |
+| bxjscls-uplatex          | upTeX    | upLaTeX       | dvipdfmk | bxjsarticle | pBiBTeX          | [BXjscls](https://texwiki.texjp.org/BXjscls)を使用してみるテスト |
+| bxjscls-uplatex-samples  | upTeX    | upLaTeX       | dvipdfmk | bxjsarticle | pBiBTeX          | ↑のサンプル付きバージョン |
+| bxjscls-uplatex-nocite   | upTeX    | upLaTeX       | dvipdfmk | bxjsarticle | pBiBTeX          | ↑の参考文献なしバージョン |
 
 
 ## 使用方法
+
+すべてmakeを使います。テンプレートによっては内部的にlatexmkなど別のビルドツールを使っていますが、makeから呼び出すようにすることでテンプレート間で操作を統一しています。
 
 ### PDFを作る
 
@@ -64,9 +46,9 @@ make clean-all
 
 ## 動作環境
 
-- LaTeX関係
-  - uplatex
-  - pdfdvimx
+- TeX関係
+  - 各エンジン(upLaTeX等)
+  - 各ドライバ(dvipdfmx等)
   - pbibtex
   - パッケージ
     - plautopatch
@@ -99,6 +81,3 @@ TeX Liveのfull-schemeをインストールすれば十分です。
 
 ltxファイル内の`\nocite*{}`を削除し、`make clean-all && make`を実行してください。それでも直らない場合は知りません。
 
-### その他
-
-その他の質問はyuma14<sup>[誰？]</sup>まで
