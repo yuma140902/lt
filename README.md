@@ -8,7 +8,12 @@ LaTeXのテンプレート集です。
 いろいろな組み合わせが試せるのでお得です。
 
 ```sh
-git clone -b (ブランチ名) https://github.com/yuma140902/lt report
+git clone -b (ブランチ名) https://github.com/yuma140902/lt
+```
+
+または[tiged](https://github.com/tiged/tiged)を使用して
+```sh
+tiged yuma140902/lt#(ブランチ名)
 ```
 
 | ブランチ                   | エンジン | LaTeXエンジン | ドライバ | 文書クラス  | 文献データベース |  説明 |
