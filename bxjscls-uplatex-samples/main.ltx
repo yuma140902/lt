@@ -1,0 +1,53 @@
+\RequirePackage{plautopatch}
+\documentclass[uplatex, dvipdfmx, ja=standard, a4j, 10pt]{bxjsarticle}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{amssymb, amsmath}
+\usepackage{url}
+\usepackage{wrapfig}
+
+\title{タイトル}
+\author{yuma140902}
+\date{\today}
+
+\begin{document}
+
+\maketitle % タイトル
+\tableofcontents % 目次
+\clearpage % 改ページ
+
+% 本文
+
+\section{画像！}
+
+% 画像挿入例
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.6\textwidth]{img/image.png}
+  \caption{画像だよ～}
+  \label{figure_label}
+\end{figure}
+
+\section{表！}
+
+% 表の例
+\begin{table}[htbp]
+  \caption{表だよ～}
+  \label{table_label}
+  \centering
+  \begin{tabular}{cc}
+    \hline
+    aaaa & bbbb \\
+    \hline
+    AAAA & BBBB \\
+    CCCC & DDDD \\
+    \hline
+  \end{tabular}
+\end{table}
+
+% 参考文献リスト
+\nocite*{}
+\bibliographystyle{junsrt}
+\bibliography{cite}
+
+\end{document}
