@@ -1,21 +1,20 @@
 # LaTeX Templates
 
-LaTeXのテンプレート集です。
+LaTeXのテンプレート集
 
 ## セットアップ方法
 
-テンプレートは複数あり、ブランチによって分けられています。
+テンプレートは複数あり、ディレクトリによって分けられています。
+
+[tiged](https://github.com/tiged/tiged)を使用して
 
 ```sh
-git clone -b (ブランチ名) https://github.com/yuma140902/lt hogehoge
+tiged "yuma140902/lt/(ディレクトリ)"
 ```
 
-または[tiged](https://github.com/tiged/tiged)を使用して
-```sh
-tiged yuma140902/lt#(ブランチ名) hogehoge
-```
+のようにするとカレントディレクトリに複製できます。
 
-| ブランチ                   | エンジン | LaTeXエンジン | ドライバ | 文書クラス  | 文献データベース |  説明 |
+| ディレクトリ               | エンジン | LaTeXエンジン | ドライバ | 文書クラス  | 文献データベース |  説明 |
 |----------------------------|----------|---------------|----------|-------------|------------------|------|
 | `empty`                    | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | 普通はこれを使えばいいと思います |
 | `nocite`                   | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | なし             | 普通はこれを使えばいいと思いますその2 |
@@ -30,7 +29,7 @@ tiged yuma140902/lt#(ブランチ名) hogehoge
 
 ## 使用方法
 
-すべてmakeを使います。テンプレートによっては内部的にlatexmkなど別のビルドツールを使っていますが、makeから呼び出すようにすることでテンプレート間で操作を統一しています。
+すべてmakeを使います。
 
 ### PDFを作る
 
