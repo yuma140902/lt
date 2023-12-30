@@ -16,15 +16,13 @@ tiged "yuma140902/lt/(ディレクトリ)"
 
 | ディレクトリ               | エンジン | LaTeXエンジン | ドライバ | 文書クラス  | 文献データベース |  説明 |
 |----------------------------|----------|---------------|----------|-------------|------------------|------|
-| `empty`                    | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | 普通はこれを使えばいいと思います |
-| `nocite`                   | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | なし             | 普通はこれを使えばいいと思いますその2 |
-| `master`                   | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | サンプル付きです |
-| `bxjscls-uplatex`          | upTeX    | upLaTeX       | dvipdfmx | bxjsarticle | pBiBTeX          | [BXjscls](https://texwiki.texjp.org/BXjscls)を使用してみるテスト |
-| `bxjscls-uplatex-samples`  | upTeX    | upLaTeX       | dvipdfmx | bxjsarticle | pBiBTeX          | ↑のサンプル付きバージョン |
-| `bxjscls-uplatex-nocite`   | upTeX    | upLaTeX       | dvipdfmx | bxjsarticle | なし             | ↑の参考文献なしバージョン |
-| `lualatex-bxjscls-empty`   | luaTeX   | luaLaTeX      | なし     | bxjsarticle | pBiBTeX          | LuaLaTeX |
-| `lualatex-bxjscls-samples` | luaTeX   | luaLaTeX      | なし     | bxjsarticle | pBiBTeX          | LuaLaTeX |
-| `lualatex-bxjscls-nocite`  | luaTeX   | luaLaTeX      | なし     | bxjsarticle | なし             | LuaLaTeX |
+| `up-cite`                  | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | 普通はこれを使えばいいと思います |
+| `up-nocite`                | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | なし             | 普通はこれを使えばいいと思いますその2 |
+| `up-sample`                | upTeX    | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | サンプル付きです |
+| `up-bx-cite`               | upTeX    | upLaTeX       | dvipdfmx | bxjsarticle | pBiBTeX          | [BXjscls](https://texwiki.texjp.org/BXjscls)を使用してみるテスト |
+| `up-bx-nocite`             | upTeX    | upLaTeX       | dvipdfmx | bxjsarticle | なし             | ↑の参考文献なしバージョン |
+| `lua-bx-cite`              | luaTeX   | luaLaTeX      | なし     | bxjsarticle | pBiBTeX          | LuaLaTeX |
+| `lua-bx-nocite`            | luaTeX   | luaLaTeX      | なし     | bxjsarticle | なし             | LuaLaTeX |
 
 
 ## 使用方法
