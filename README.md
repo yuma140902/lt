@@ -16,14 +16,9 @@ tiged "yuma140902/lt/(ディレクトリ)"
 
 | ディレクトリ               | LaTeXエンジン | ドライバ | 文書クラス  | 文献データベース |  説明 |
 |----------------------------|---------------|----------|-------------|------------------|------|
-| `up-cite`                  | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | 普通はこれを使えばいいと思います |
-| `up-nocite`                | upLaTeX       | dvipdfmx | jsarticle   | なし             | 普通はこれを使えばいいと思いますその2 |
+| `up-cite`                  | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | |
+| `up-nocite`                | upLaTeX       | dvipdfmx | jsarticle   | なし             | |
 | `up-sample`                | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | サンプル付きです |
-| `up-bx-cite`               | upLaTeX       | dvipdfmx | bxjsarticle | pBiBTeX          | [BXjscls](https://texwiki.texjp.org/BXjscls)を使用してみるテスト |
-| `up-bx-nocite`             | upLaTeX       | dvipdfmx | bxjsarticle | なし             | ↑の参考文献なしバージョン |
-| `lua-bx-cite`              | luaLaTeX      | なし     | bxjsarticle | pBiBTeX          | LuaLaTeX |
-| `lua-bx-nocite`            | luaLaTeX      | なし     | bxjsarticle | なし             | LuaLaTeX |
-
 
 ## 使用方法
 
@@ -49,11 +44,7 @@ make clean-all
 
 ## 動作環境
 
-- TeX関係
-  - 各エンジン(upLaTeX等)
-  - 各ドライバ(dvipdfmx等)
-  - pbibtex
-  - 各パッケージ
+- LaTeXが動く環境
 - make
 - git
 - LinuxまたはWindows (おそらくmacOSでも動作します)
