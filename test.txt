@@ -1,0 +1,47 @@
+\section{\LaTeX 日本語組版の確認}
+\label{hoge}
+
+参考: LaTeX の「アレなデフォルト」 傾向と対策 \#LaTeX - Qiita \\
+(https://qiita.com/zr\_tex8r/items/297154ca924749e62471)
+
+
+\subsection{フォントメトリクスの確認 min10 or ijs}
+\ref{hoge}
+
+\begin{verse}
+	チェック
+\end{verse}
+上の「ェ」と「ッ」の間が不自然に詰まっていませんか？
+
+\subsection{エンコーディングの確認 OT1 or T1}
+
+< > | \& \# \$ \% \{ \} \_ \^{} \~{} \textbackslash
+
+大なり、小なり、パイプが出力されていますか？
+
+アンダースコアがただの線ではなく文字として出力されていますか？
+
+\subsection{BMP外の文字}
+
+「叱(U+53F1)」と「𠮟(U+20B9F)」
+
+\subsection{仮想ボディの確認}
+
+\setlength{\fboxsep}{0pt}
+\fbox{A} \fbox{g} \fbox{/} \fbox{あ} \fbox{漢}
+
+文字が上の方に寄っていませんか？
+
+\subsection{fontsizeの確認}
+
+\begin{center}
+	\fontsize{15}{15}\selectfont M
+	\fontsize{16}{16}\selectfont M
+	\fontsize{17}{17}\selectfont M
+	\fontsize{18}{18}\selectfont M
+	\fontsize{19}{19}\selectfont M
+	\fontsize{20}{20}\selectfont M
+\end{center}
+
+Mの大きさが連続的に変化していますか？
+
