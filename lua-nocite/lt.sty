@@ -1,0 +1,47 @@
+\usepackage{luatexja}
+
+%\usepackage{siunitx}
+
+% レイアウトに関するもの
+%\usepackage{wrapfig}
+%\usepackage{caption2} % float外でキャプションをつけられる\captionofを提供する
+
+% グラフィック
+\usepackage{graphicx}
+
+% 数式
+\usepackage{amsmath}
+\usepackage{onlyamsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{autonum}
+%\usepackage{physics2}
+%\usepackage{derivative}
+
+% TikZを利用したもの
+%\usepackage{tcolorbox}
+
+\usepackage{ifdraft}
+\ifdraft{
+	% デバッグ情報を出力する
+	\usepackage[color]{showkeys}
+	\definecolor{refkey}{gray}{.9} % showkeysの色をグレーにする
+	\usepackage{gentombow}
+	\usepackage[noheader]{gitver}
+	\settombowbanner{\jobname\space\versionBox}
+}
+{
+	% PDFにメタデータを埋め込む
+	\usepackage{xurl}
+	\usepackage[
+		pdfencoding=auto,
+		psdextra,
+		pdfusetitle,
+		hidelinks,
+		pdfversion=1.7,
+	]{hyperref}
+	\usepackage{hyperxmp}
+}
+
+

@@ -14,33 +14,16 @@ tiged "yuma140902/lt/(ディレクトリ)"
 
 のようにするとカレントディレクトリに複製できます。
 
-| ディレクトリ               | LaTeXエンジン | ドライバ | 文書クラス  | 文献データベース |  説明 |
-|----------------------------|---------------|----------|-------------|------------------|------|
-| `up-cite`                  | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | |
-| `up-nocite`                | upLaTeX       | dvipdfmx | jsarticle   | なし             | |
-| `up-sample`                | upLaTeX       | dvipdfmx | jsarticle   | pBiBTeX          | サンプル付きです |
+| ディレクトリ               | エンジン    | ドライバ | 文書クラス  | 文献データベース |  説明 |
+|----------------------------|-------------|----------|-------------|------------------|------|
+| `up-cite`                  | upTeX       | dvipdfmx | jsarticle   | pBiBTeX          | |
+| `up-nocite`                | upTeX       | dvipdfmx | jsarticle   | なし             | |
+| `up-sample`                | upTeX       | dvipdfmx | jsarticle   | pBiBTeX          | サンプル付きです |
+| `lua-nocite`               | LuaTex      | なし     | jlreq       | なし             | |
 
 ## 使用方法
 
-すべてmakeを使います。
-
-### PDFを作る
-
-```sh
-make
-```
-
-### タイプセットの中間ファイルを削除する
-
-```sh
-make clean
-```
-
-### PDFファイルも含む中間ファイルを削除する
-
-```sh
-make clean-all
-```
+すべてmakeを使います。使用方法は`make help`を実行してください。
 
 ## 動作環境
 
