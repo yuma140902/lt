@@ -1,3 +1,28 @@
+% Created by yuma14 on 2021/01/12
+%
+% lt.sty
+%
+
+% LaTeX2eのみ対応
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{lt}[2024/01/12]
+% LuaLaTeXのみ対応
+\RequirePackage{iftex}
+\RequireLuaTeX
+
+\RequirePackage{ifthen}
+\RequirePackage{xkeyval}
+\RequirePackage{xparse}
+
+\newboolean{lt@git}
+\newboolean{lt@hyperref}
+\DeclareOptionX{subject}{\def\lt@subject{#1}}
+\DeclareOptionX{keywords}{\def\lt@keywords{#1}}
+\DeclareOptionX{git}{\setboolean{lt@git}{#1}}
+\DeclareOptionX{hyperref}{\setboolean{lt@hyperref}{#1}}
+
+\ExecuteOptionsX{git=false,subject=,keywords=}
+\ProcessOptionsX\relax
 \usepackage{luatexja}
 
 %\usepackage{siunitx}
@@ -27,20 +52,31 @@
 	\usepackage[color]{showkeys}
 	\definecolor{refkey}{gray}{.9} % showkeysの色をグレーにする
 	\usepackage{gentombow}
-	\usepackage[noheader]{gitver}
-	\settombowbanner{\jobname\space\versionBox}
+	\ifthenelse{\boolean{lt@git}}{
+		\usepackage[noheader]{gitver}
+		\settombowbanner{\jobname\space\versionBox}
+	}{}
 }
 {
-	% PDFにメタデータを埋め込む
-	\usepackage{xurl}
-	\usepackage[
-		pdfencoding=auto,
-		psdextra,
-		pdfusetitle,
-		hidelinks,
-		pdfversion=1.7,
-	]{hyperref}
-	\usepackage{hyperxmp}
+	\ifthenelse{\boolean{lt@hyperref}}{
+		% PDFにメタデータを埋め込む
+		\usepackage{xurl}
+		\usepackage[
+			pdfencoding=auto,
+			psdextra,
+			pdfusetitle,
+			hidelinks,
+			pdfversion=1.7,
+		]{hyperref}
+		\usepackage{hyperxmp}
+		\hypersetup{
+			bookmarksnumbered=true,
+			bookmarksopen=true,
+			pdfsubject={\lt@subject},
+			pdfkeywords={\lt@keywords},%キーワード
+			keeppdfinfo,
+		}
+	}{}
 }
 
 
