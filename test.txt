@@ -1,12 +1,10 @@
 \section{\LaTeX 日本語組版の確認}
-\label{hoge}
 
 参考: LaTeX の「アレなデフォルト」 傾向と対策 \#LaTeX - Qiita \\
 (https://qiita.com/zr\_tex8r/items/297154ca924749e62471)
 
 
 \subsection{フォントメトリクスの確認 min10 or ijs}
-\ref{hoge}
 
 \begin{verse}
 	チェック
