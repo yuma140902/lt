@@ -1,4 +1,5 @@
 .PHONY: clean
+.PHONY: clean-all
 .PHONY: all
 .SECONDARY:
 
