@@ -39,6 +39,8 @@ clean: ## Clean latex intermediary files
 	rm -f $(SOURCE)-blx.aux | echo
 	rm -f $(SOURCE)-blx.bib | echo
 	rm -f $(SOURCE).run.xml | echo
+	rm -f $(SOURCE)_desc.aux | echo
+	rm -f $(SOURCE).xmpdata | echo
 	rm -rf _minted*
 
 clean-all: clean ## Clean all intermediary files including .dvi, and .pdf
