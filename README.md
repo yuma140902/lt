@@ -14,12 +14,12 @@ tiged "yuma140902/lt/(ディレクトリ)"
 
 のようにするとカレントディレクトリに複製できます。
 
-| ディレクトリ               | エンジン    | ドライバ | 文書クラス  | 文献データベース |  説明 |
-|----------------------------|-------------|----------|-------------|------------------|------|
-| `up-cite`                  | upTeX       | dvipdfmx | jsarticle   | pBiBTeX          | |
-| `up-nocite`                | upTeX       | dvipdfmx | jsarticle   | なし             | |
-| `up-sample`                | upTeX       | dvipdfmx | jsarticle   | pBiBTeX          | サンプル付きです |
-| `lua-nocite`               | LuaTex      | なし     | jlreq       | なし             | |
+| ディレクトリ               | エンジン    | ドライバ | 文書クラス             | 文献データベース |  説明 |
+|----------------------------|-------------|----------|------------------------|------------------|------|
+| `up-cite`                  | upTeX       | dvipdfmx | jsarticle              | pBiBTeX          | |
+| `up-nocite`                | upTeX       | dvipdfmx | jsarticle              | なし             | |
+| `up-sample`                | upTeX       | dvipdfmx | jsarticle              | pBiBTeX          | サンプル付きです |
+| `lua-nocite`               | LuaTex      | なし     | ltjsarticleまたはjlreq | なし             | |
 
 ## 使用方法
 
