@@ -19,7 +19,7 @@ tiged "yuma140902/lt/(ディレクトリ)"
 | `up-cite`                  | upTeX       | dvipdfmx | jsarticle              | pBiBTeX          | |
 | `up-nocite`                | upTeX       | dvipdfmx | jsarticle              | なし             | |
 | `up-sample`                | upTeX       | dvipdfmx | jsarticle              | pBiBTeX          | サンプル付きです |
-| `lua-nocite`               | LuaTex      | なし     | ltjsarticleまたはjlreq | なし             | |
+| `lua-nocite`               | LuaTex      | なし     | ltjsarticleまたはjlreq | なし             | 推奨 |
 
 ## 使用方法
 
