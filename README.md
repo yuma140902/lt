@@ -16,10 +16,11 @@ tiged "yuma140902/lt/(ディレクトリ)"
 
 | ディレクトリ               | エンジン    | ドライバ | 文書クラス             | 文献データベース |  説明 |
 |----------------------------|-------------|----------|------------------------|------------------|------|
+| `lua-cite`                 | LuaTex      | なし     | ltjsarticleまたはjlreq | Biber            | 推奨 |
+| `lua-nocite`               | LuaTex      | なし     | ltjsarticleまたはjlreq | なし             | 推奨 |
 | `up-cite`                  | upTeX       | dvipdfmx | jsarticle              | pBiBTeX          | |
 | `up-nocite`                | upTeX       | dvipdfmx | jsarticle              | なし             | |
 | `up-sample`                | upTeX       | dvipdfmx | jsarticle              | pBiBTeX          | サンプル付きです |
-| `lua-nocite`               | LuaTex      | なし     | ltjsarticleまたはjlreq | なし             | 推奨 |
 
 ## 使用方法
 

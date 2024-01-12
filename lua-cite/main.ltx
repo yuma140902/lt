@@ -6,6 +6,7 @@
   subject={},    % 主題 - PDFにメタデータとして埋め込まれる
   keywords={}    % キーワード - PDFにメタデータとして埋め込まれる
 ]{lt}
+\addbibresource{cite.bib}
 
 \title{}
 \author{}
@@ -14,5 +15,10 @@
 \begin{document}
 
 \maketitle
+
+\nocite{*} % 参照していない文献も出力する
+\renewcommand*{\refname}{参考文献}
+\defbibheading{lt@bibhead}[\refname]{\section*{#1}}
+\printbibliography[heading=lt@bibhead]
 
 \end{document}

@@ -4,14 +4,14 @@
 (https://qiita.com/zr\_tex8r/items/297154ca924749e62471)
 
 
-\subsection{フォントメトリクスの確認 min10 or ijs}
+\subsection{フォントメトリクスの確認}
 
 \begin{verse}
 	チェック
 \end{verse}
 上の「ェ」と「ッ」の間が不自然に詰まっていませんか？
 
-\subsection{エンコーディングの確認 OT1 or T1}
+\subsection{エンコーディングの確認}
 
 < > | \& \# \$ \% \{ \} \_ \^{} \~{} \textbackslash
 
