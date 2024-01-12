@@ -14,19 +14,25 @@ BIBER_FLAGS =
 SOURCE = main
 BIB = cite
 
-once: $(SOURCE).ltx $(BIB).bib ## Create draft PDF
+help: ## Prints help for targets with comments
+	@cat $(MAKEFILE_LIST) | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+once: $(SOURCE).ltx ## 1回だけタイプセットする
 	$(LATEX) $(LATEX_FLAGS) $(SOURCE).ltx
 
-all: $(SOURCE).ltx $(BIB).bib Makefile ## Create PDF
+bib: $(BIB).bib ## 文献リストを更新する
+	$(BIBER) $(BIBER_FLAGS) $(SOURCE)
+
+all: $(SOURCE).ltx $(BIB).bib Makefile ## 完成品のPDFを作る
 	$(LATEX) $(LATEX_FLAGS) $(SOURCE).ltx
 	$(BIBER) $(BIBER_FLAGS) $(SOURCE)
 	$(LATEX) $(LATEX_FLAGS) $(SOURCE).ltx
 	$(LATEX) $(LATEX_FLAGS) $(SOURCE).ltx
 
-checkbib: ## Validate cite.bib
+checkbib: ## cite.bibを検証する
 	$(BIBER) $(BIBER_FLAGS) --tool --validate_datamodel $(BIB).bib
 
-clean: ## Clean latex intermediary files
+clean: ## 生成された中間ファイルを削除する
 	rm -f $(SOURCE).aux | echo
 	rm -f $(SOURCE).lof | echo
 	rm -f $(SOURCE).log | echo
@@ -54,10 +60,7 @@ clean: ## Clean latex intermediary files
 	rm -f texput.log | echo
 	rm -rf _minted*
 
-clean-all: clean ## Clean all intermediary files including .dvi, and .pdf
+clean-all: clean ## 生成された中間ファイルとPDFファイルを削除する
 	@#https://ir9ex.hatenablog.jp/entry/20121206/1354774247
 	rm -f $(SOURCE).pdf | echo
-
-help: ## Prints help for targets with comments
-	@cat $(MAKEFILE_LIST) | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
