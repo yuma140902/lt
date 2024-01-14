@@ -18,7 +18,7 @@ tiged "yuma140902/lt/(ディレクトリ)"
 |----------------------------|-------------|----------|------------------------|------------------|------|
 | `lua-cite`                 | LuaTex      | なし     | ltjsarticleまたはjlreq | Biber            | 推奨 |
 | `lua-nocite`               | LuaTex      | なし     | ltjsarticleまたはjlreq | なし             | 推奨 |
-| `docker-nocite`            | LuaTex      | なし     | ltjsarticleまたはjlreq | なし             | Dockerを用いてコンパイルするためTeX環境のセットアップが不要 |
+| `docker-nocite`            | LuaTex      | なし     | ltjsarticleまたはjlreq | なし             | Dockerを用いてコンパイルするためTeX環境のセットアップが不要\\非推奨 |
 | `up-cite`                  | upTeX       | dvipdfmx | jsarticle              | pBiBTeX          | |
 | `up-nocite`                | upTeX       | dvipdfmx | jsarticle              | なし             | |
 | `up-sample`                | upTeX       | dvipdfmx | jsarticle              | pBiBTeX          | サンプル付きです |
