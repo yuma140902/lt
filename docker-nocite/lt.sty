@@ -1,0 +1,84 @@
+% Created by yuma14 on 2024/01/12
+%
+% lt.sty
+%
+
+% LaTeX2eのみ対応
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{lt}[2024/01/12]
+% LuaLaTeXのみ対応
+\RequirePackage{iftex}
+\RequireLuaTeX
+
+\RequirePackage{ifthen}
+\RequirePackage{xkeyval}
+\RequirePackage{xparse}
+\RequirePackage[l2tabu, orthodox, abort]{nag}
+
+\newboolean{lt@git}
+\newboolean{lt@hyperref}
+\DeclareOptionX{subject}{\def\lt@subject{#1}}
+\DeclareOptionX{keywords}{\def\lt@keywords{#1}}
+\DeclareOptionX{git}{\setboolean{lt@git}{#1}}
+\DeclareOptionX{hyperref}{\setboolean{lt@hyperref}{#1}}
+
+\ExecuteOptionsX{git=false,subject=,keywords=}
+\ProcessOptionsX\relax
+
+\usepackage{luatexja}
+%\usepackage{siunitx}
+\usepackage{xurl}
+
+% レイアウトに関するもの
+%\usepackage{wrapfig}
+%\usepackage{caption2} % float外でキャプションをつけられる\captionofを提供する
+
+% グラフィック
+\usepackage{graphicx}
+
+% 数式
+\usepackage{amsmath}
+\usepackage[all,error]{onlyamsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{newtxtext,newtxmath}
+%\usepackage{physics2}
+%\usepackage{derivative}
+
+% TikZを利用したもの
+%\usepackage{tcolorbox}
+
+\usepackage{ifdraft}
+\ifdraft{
+	% デバッグ情報を出力する
+	\usepackage[color]{showkeys}
+	\definecolor{refkey}{gray}{.9} % showkeysの色をグレーにする
+	\usepackage{gentombow}
+	\ifthenelse{\boolean{lt@git}}{
+		\usepackage[noheader]{gitver}
+		\settombowbanner{\jobname\space\versionBox}
+	}{}
+}
+{
+	\ifthenelse{\boolean{lt@hyperref}}{
+		% PDFにメタデータを埋め込む
+		\usepackage[
+			pdfencoding=auto,
+			psdextra,
+			pdfusetitle,
+			hidelinks,
+			pdfversion=1.7,
+		]{hyperref}
+		\usepackage{hyperxmp}
+		\hypersetup{
+			bookmarksnumbered=true,
+			bookmarksopen=true,
+			pdfsubject={\lt@subject},
+			pdfkeywords={\lt@keywords},%キーワード
+			keeppdfinfo,
+		}
+	}{}
+}
+
+
