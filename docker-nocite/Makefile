@@ -51,5 +51,5 @@ clean: ## 生成された中間ファイルを削除する
 	rm -rf _minted*
 
 .PHONY: clean-all
-clean-all: ## 生成されたPDFファイルを削除する
+clean-all: clean ## 生成された中間ファイルとPDFファイルを削除する
 	rm -f $(SOURCE).pdf | echo

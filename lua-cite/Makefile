@@ -1,8 +1,3 @@
-.PHONY: draft
-.PHONY: all
-.PHONY: clean
-.PHONY: clean-all
-.PHONY: help
 .SECONDARY:
 
 #LATEX = texfot lualatex
@@ -14,24 +9,30 @@ BIBER_FLAGS =
 SOURCE = main
 BIB = cite
 
+.PHONY: help
 help: ## Prints help for targets with comments
 	@cat $(MAKEFILE_LIST) | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
+.PHONY: once
 once: $(SOURCE).ltx ## 1回だけタイプセットする
 	$(LATEX) $(LATEX_FLAGS) $(SOURCE).ltx
 
+.PHONY: bib
 bib: $(BIB).bib ## 文献リストを更新する
 	$(BIBER) $(BIBER_FLAGS) $(SOURCE)
 
+.PHONY: all
 all: $(SOURCE).ltx $(BIB).bib Makefile ## 完成品のPDFを作る
 	$(LATEX) $(LATEX_FLAGS) $(SOURCE).ltx
 	$(BIBER) $(BIBER_FLAGS) $(SOURCE)
 	$(LATEX) $(LATEX_FLAGS) $(SOURCE).ltx
 	$(LATEX) $(LATEX_FLAGS) $(SOURCE).ltx
 
+.PHONY: checkbib
 checkbib: ## cite.bibを検証する
 	$(BIBER) $(BIBER_FLAGS) --tool --validate_datamodel $(BIB).bib
 
+.PHONY: clean
 clean: ## 生成された中間ファイルを削除する
 	rm -f $(SOURCE).aux | echo
 	rm -f $(SOURCE).lof | echo

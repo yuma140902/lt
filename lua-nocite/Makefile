@@ -1,8 +1,3 @@
-.PHONY: draft
-.PHONY: all
-.PHONY: clean
-.PHONY: clean-all
-.PHONY: help
 .SECONDARY:
 
 #LATEX = texfot lualatex
@@ -11,16 +6,20 @@ LATEX_FLAGS = -shell-escape -halt-on-error -file-line-error -file-line-error
 
 SOURCE = main
 
+.PHONY: help
 help: ## Prints help for targets with comments
 	@cat $(MAKEFILE_LIST) | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
+.PHONY: once
 once: $(SOURCE).ltx ## 1回だけタイプセットする
 	$(LATEX) $(LATEX_FLAGS) $(SOURCE).ltx
 
+.PHONY: all
 all: $(SOURCE).ltx Makefile ## 完成品のPDFを作る
 	$(LATEX) $(LATEX_FLAGS) $(SOURCE).ltx
 	$(LATEX) $(LATEX_FLAGS) $(SOURCE).ltx
 
+.PHONY: clean
 clean: ## 生成された中間ファイルを削除する
 	rm -f $(SOURCE).aux | echo
 	rm -f $(SOURCE).lof | echo
@@ -47,6 +46,7 @@ clean: ## 生成された中間ファイルを削除する
 	rm -f texput.log | echo
 	rm -rf _minted*
 
+.PHONY: clean-all
 clean-all: clean ## 生成された中間ファイルとPDFファイルを削除する
 	@#https://ir9ex.hatenablog.jp/entry/20121206/1354774247
 	rm -f $(SOURCE).pdf | echo
