@@ -13,6 +13,7 @@
 \RequirePackage{ifthen}
 \RequirePackage{xkeyval}
 \RequirePackage{xparse}
+\RequirePackage[l2tabu, orthodox, abort]{nag}
 
 \newboolean{lt@git}
 \newboolean{lt@hyperref}
@@ -37,7 +38,7 @@
 
 % 数式
 \usepackage{amsmath}
-\usepackage{onlyamsmath}
+\usepackage[all,error]{onlyamsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{bm}
