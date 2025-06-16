@@ -1,0 +1,72 @@
+\documentclass[a4paper, 10pt, nomag]{ltjsarticle}
+
+% LaTex2e のみ対応
+\NeedsTeXFormat{LaTeX2e}
+% LuaLaTeX のみ対応
+\RequireLuaTeX
+
+% 悪いとされている書き方を禁止する
+\usepackage[l2tabu, orthodox, abort]{nag}
+
+\usepackage{luatexja}
+
+\title{}
+\author{}
+\date{\today}
+% PDF にメタデータとして埋め込む subject
+\newcommand{\ltpdfsubject}{}
+% PDF にメタデータとして埋め込むキーワード
+\newcommand{\ltpdfkeywords}{}
+
+% 複数行の URL
+\usepackage{xurl}
+
+% 文章を回り込ませることができる fig 環境
+%\usepackage{wrapfig}
+% float外でキャプションをつけられる\captionofを提供する
+%\usepackage{caption2}
+
+\usepackage{graphicx}
+
+% 数式
+\usepackage{amsmath}
+\usepackage[all,error]{onlyamsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{newtxtext,newtxmath}
+%\usepackage{physics2}
+%\usepackage{derivative}
+
+% パッケージを追加する場合はこの辺に書く
+
+% hyperref はなるべく後から読み込むのがよい
+% hyperref が他のパッケージの読み込み状況を見て動作を変えるため
+\usepackage[
+	pdfencoding=auto,
+	psdextra,
+	pdfusetitle,
+	hidelinks,
+	pdfversion=1.7,
+]{hyperref}
+\hypersetup{
+	bookmarksnumbered=true,
+	bookmarksopen=true,
+	pdfsubject={\ltpdfsubject},
+	pdfkeywords={\ltpdfkeywords},%キーワード
+}
+
+% biblatexの読み込みはhyperrefより後が良い
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex}
+\addbibresource{cite.bib}
+
+\begin{document}
+
+\maketitle
+
+\input{body.ltx}
+
+%\nocite{*} % 参照していない文献も出力する
+\printbibliography[title=参考文系]
+
+\end{document}

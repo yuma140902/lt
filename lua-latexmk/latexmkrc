@@ -1,0 +1,2 @@
+$pdf_mode = 4; # 4: lualatex
+$latex = "lualatex -synctex=1 -halt-on-error -shell-escape -file-line-error";
