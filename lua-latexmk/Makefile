@@ -10,6 +10,8 @@ clean: ## 生成された中間ファイルを削除する
 	rm -f main.bbl | echo
 	rm -f *_bibertool.bib
 	rm -rf _minted*
+	rm -f cite.bib.blg | echo
+	rm -f *.synctex.gz
 
 .PHONY: checkbib
 checkbib: ## cite.bib を検証する
