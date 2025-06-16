@@ -1,5 +1,5 @@
 .PHONY: all
-all: main.pdf ## make all
+all: main.pdf ## タイプセットする
 
 main.pdf: main.ltx body.ltx
 	latexmk main.ltx
