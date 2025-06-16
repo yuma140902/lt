@@ -30,4 +30,3 @@ tiged "yuma140902/lt/(ディレクトリ)"
 - make
 - git
 - Linux, Windows, macOS
-
