@@ -8,6 +8,7 @@ main.pdf: main.ltx body.ltx
 clean: ## 生成された中間ファイルを削除する
 	latexmk -c main.ltx
 	rm -f main.bbl | echo
+	rm -f *_bibertool.bib
 	rm -rf _minted*
 
 .PHONY: checkbib
